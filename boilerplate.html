@@ -4,6 +4,11 @@
 	<!-- Inline your CSS before attempting delivery: http://templates.mailchimp.com/resources/inline-css/ -->
 	<!-- Based shamelessly on Email on Acid's boilerplate, see http://www.emailonacid.com/blog/details/C13/html_boilerplate -->
 
+	
+	<!-- Why certain stuff was done the way it was done:
+	    -Outlook.com doesn't respect margins https://litmus.com/help/email-clients/outlookcom-margins/
+	-->
+	
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   
   
@@ -39,6 +44,13 @@
 	}
 
 
+	/*** Basic Divs ***/
+	.div200 {width: 200px; display: inline-block; vertical-align: top;}
+	.div196 {width: 196px; display: inline-block; vertical-align: top;}
+	.div290 {width: 290px; display: inline-block; vertical-align: top;}
+	.div600 {width: 600px; display: inline-block; vertical-align: top;}
+	.divSpacer {width: 10px; display: inline-block; vertical-align: top; background-color:#cc0000;}
+	
 	/****** RESETTING DEFAULTS, IT IS BEST TO OVERWRITE THESE STYLES INLINE ********/
  
 	p {
@@ -55,7 +67,7 @@
 	}  
  
 
-	/****** EDIT THESE TO MEET THE STYLE OF YOUR BRAND ********/
+	/****** GENERAL STYLES - EDIT THESE TO MEET THE STYLE OF YOUR BRAND ********/
 	
 	/*** Body and Backgrounds ***/
 	body, #body_style {
@@ -67,16 +79,12 @@
 
         }
 
-	.interiortable {
-		background-color: #F1F2F2;
-		
-	}  
+	.interiortable {background-color: #F1F2F2;}  
 
 	p {
 		margin-top:0;
 		margin-bottom:10px; 
-		text-align:left;
-		
+	
 	}
 
 
@@ -109,14 +117,16 @@
 		font-size:24px; 
 		font-weight:bold; 
 		padding: 0px 5px 0px 5px; 
+		text-align: center;
 		vertical-align:top; 
 		line-height:32px; 
 		
 	}
 		
 	.story01 {
-		color:#333; 
+		color:#333333; 
 		padding: 0px 5px 0px 5px; 
+		text-align: left;
 		vertical-align:top; 
 		line-height: 22px;
 		
@@ -137,14 +147,37 @@
 	
 		
 	.story02 {
-		color:#333; 
+		color:#FFFFFF; 
 		padding: 0px 5px 0px 5px; 
+		text-align: left;
 		vertical-align:top; 
 		line-height: 22px;
 		
 	}
 	
+
+	/*** Text Group 03 ***/
 	
+	.headline03 {
+		color:#333333;
+		font-size:14px; 
+		font-weight:bold; 
+		padding: 0px 5px 0px 5px; 
+		vertical-align:top; 
+		text-align: left;
+		line-height:20px; 
+		
+	}
+	
+		
+	.story03 {
+		color:#333333; 
+		padding: 0px 5px 0px 5px; 
+		text-align: left;
+		vertical-align:top; 
+		line-height: 22px;
+		
+	}	
 	/*** Quote Text ***/
 	.quote {
 		color:#999999; 
@@ -159,3 +192,475 @@
 		font-style: normal;
 		
 	} /*place citation inside span tag nested into quote element
+
+
+	/*** Footer ***/
+	.footer, .footer a {
+		color:#FFFFFF; 
+		font-weight:bold; 
+		padding: 5px 5px 5px 5px; 
+		vertical-align:top; 
+		line-height: 120%; 
+		text-align: center;
+		
+	}	
+	
+	/*** Images ***/
+	.sideimage {
+		vertical-align:top; 
+		text-align:center; 
+		padding-bottom:10px;
+		
+	}
+
+	.fullwidthimg {
+		vertical-align:top; 
+		text-align:center;
+		
+	}
+	
+	.fullwidthimg img {
+		width:100%;
+		
+	}
+	
+	/*** Indents ***/
+	.indent10 {
+			text-align: left; 
+			padding-left:10px;
+		
+	}
+	
+	.indent20 {
+		text-align: left; 
+		padding-left:20px;
+		
+	}
+	
+	.indent30 {
+		text-align: left; 
+		padding-left:30px;
+		
+	}
+
+	/***Background Colors***/
+	.bgclr01 {background-color:#E7E7E7;}
+	.bgclr02 {background-color:#026D77;}
+	.bgclr03 {background-color:#EC1B30;}
+	.bgclr04 {background-color:#003B4B;}
+	.bgclr05 {background-color:#FFFFFF;}
+
+
+	/****** CTA BLOCK STYLEs - EDIT THESE TO MEET THE STYLE OF YOUR BRAND ********/
+
+	/***CTA-2-Horiz***/	
+	.ctaBox_inner2, .ctaBox_inner2 a {
+		color:#FFFFFF;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		line-height: 22px;
+		text-align:center;
+		vertical-align:middle;
+		height:45px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-right: 2px;
+		padding-left: 2px; 
+		text-decoration:underline;
+
+	}
+
+	
+	/***CTA-4-Horiz***/	
+	.ctaBox_outer4 {padding:10px 10px; width:130px; vertical-align:top ;height:150px; border:1px blue solid;} 
+	.ctaBox_inner4 {color:#eb3c46; font-family:Arial; font-size:20px; text-align:center; vertical-align:middle; height:120px; width: 150px; padding: 2px 2px; border:1px #cc0000 solid; }
+	.ctaBox_inner4 a {color:#FFFFFF; text-decoration:none;}
+
+	/***Button Details***/
+	.buttonColor01 {background: #EC1B30;}
+	.buttonColor02 {background: #cc0000;}
+	.buttonRounded   {border-radius: 15px;  -moz-border-radius: 15px; -webkit-border-radius: 15px;}
+
+	/***Custom Styles***/
+	.ctaHeightHeadline {
+		height:30px; 
+		text-align: 
+		left; 
+		vertical-align: top;
+	
+	}
+	
+	.ctaHeightBody {
+		height:75px; 
+		text-align: left; 
+		vertical-align: top;
+	
+	}
+	
+	.ctaHeightButton {
+		height:95px;
+		text-align: center; 
+		vertical-align: middle;
+		padding-right: 45px;
+		padding-left: 45px; 
+		
+	}
+
+
+	
+	.ctaBox_mrgnR5 {
+		padding-right: 5px;
+		padding-left: 5px;
+		padding-bottom: 5px;
+	}
+	
+	.ctaBox_mrgnL5 {
+		padding-left: 5px;
+		padding-right: 5px;
+		
+	}
+
+	/****** CONTENT-BLOCK SPECIFIC STYLE - EDIT THESE TO MEET THE STYLE OF YOUR BRAND ********/
+	
+	/***Navigation***/
+	.navItem, .navItem a{
+			color:#FFFFFF;
+			font-size:16px; 
+			font-weight:bold; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			padding-right: 5px;
+			padding-left: 5px; 
+			vertical-align:middle; 
+			text-align: center; 
+			line-height:200%;
+		
+	}
+	
+	.bgclrNav {background-color:#EFA238;}
+	
+	.nav3container {width: 200px;}
+	
+	
+	/***Header-1x3***/
+	.img1x3 {
+			vertical-align:top;
+			text-align:center;
+		
+	}
+	.menu1x3_text {text-align:center; vertical-align:bottom; height:31px; color:#000000; font-family:Arial; font-size:18px;}
+	.menu1x3_text a {color:#565656; text-decoration:none;}
+	.menu1x3_bg {background-color: #FFFFFF;}
+	.menu1x3_border {height:5px;} /*{border-style: solid; border-width:4px 0 0 0; height:5px; margin:0px 0px 0px 0px; padding-top:0px;padding-bottom:0px;}*/
+	.menu1x3_1 {background-color: #ff7373;}
+	.menu1x3_2 {background-color: #7FB579;}
+	.menu1x3_3 {background-color: #20b2aa;}
+
+	
+@media screen and (min-width: 621px) {
+    .container {
+        width: 620px!important;
+    }
+}
+
+@media screen and (max-width:600px) {
+    table[class="interiortable"] {
+        width: 100% !important;
+    }
+	
+	.div200, .div290, .div600, .nav3container, divSpacer {width:100% !important;}
+	
+}
+	</style>
+</head>
+<body>
+<!-- START: Interior Table -->
+		<!--[if (gte mso 9)|(IE)]>
+		<table class="interiortable" width="620" align="center" cellpadding="0" cellspacing="0" border="0" >
+			<tr>
+				<td valign="top">
+		<![endif]-->
+		<table class="container interiortable" align="center" width="100%" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2" style="max-width: 620px; padding:0px 0px;">
+
+	<!-- START: Spacer Row 10px -->
+	<!-- UNIT TESTING 02 -->
+			<tr>
+				<td style="text-align: center; vertical-align: top; font-size: 0;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td valign="top">
+					<![endif]-->
+					<div style="width: 10px; display: inline-block; vertical-align: top;">
+						<table width="10">
+							<tr>
+								<td valign="top" width="10" height="10">
+									<img alt="" src="http://image.usevents.informa.com/lib/ffcf14/m/1/spacer.gif" height="10" width="10" style="display: block;"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: Spacer Row 10px -->	
+
+	
+	<!-- START: Full Width Image -->
+	<!-- PRIMARY STYLES: None -->
+	<!-- NOTES: Image should be 600px wide. Any height will work. -->
+	<!-- UNIT TESTING 01 -->
+			<tr>
+				<td style="text-align: center; vertical-align: top; font-size: 0;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td valign="top">
+					<![endif]-->
+					<div class="div600">
+						<table width="100%">
+							<tr>
+									<td class="fullwidthimg">
+										<img src="http://image.usevents.informa.com/lib/fe93127074650d7873/m/3/img600x200.jpg" /><!-- EDITABLE: Change img src here -->
+									</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: Full Width Image -->	
+
+	
+	<!-- START: S_H3 -->
+	<!-- PRIMARY STYLES: 
+			"bgclrNav" for the containing cell; 
+			"navItem" and "navItem a" for the text; -->
+	<!-- NOTES: none -->
+	<!-- UNIT TESTING 03 -->
+			<tr>
+				<td style="text-align: center; vertical-align: middle; font-size: 0;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td valign="middle">
+					<![endif]-->
+					<div class="div200">
+						<table class="bgclrNav nav3container">
+							<tr>
+								<td class="navItem nav3container">
+									<a href="http://www.iirusa.com">Horiz Nav Link 1</a><!-- EDITABLE: text and link -->
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td valign="middle">
+					<![endif]-->
+					<div class="div200">
+						<table class="bgclrNav nav3container">
+							<tr>
+								<td class="navItem nav3container">
+									<a href="http://www.iirusa.com">Horiz Nav Link 2</a><!-- EDITABLE: text and link -->
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td valign="middle">
+					<![endif]-->
+					<div class="div200">
+						<table class="bgclrNav nav3container">
+							<tr>
+								<td class="navItem nav3container">
+									<a href="http://www.iirusa.com">Horiz Nav Link 3</a><!-- EDITABLE: text and link -->
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: NAV_H3 -->
+
+	<!-- START: Full Width Text -->
+	<!-- PRIMARY STYLES: 
+			"headline##" or "story##" for the text; 
+			all "a"'s for links; 
+			"p" for text spacing; -->
+	<!-- NOTES: use spans with inline CSS to manage styles within the container style. For example, use "quote" and "cite" in spans to call out blockquotes. -->
+	<!-- UNIT TESTING 04 -->
+			<tr>
+				<td  style="text-align: center; vertical-align: top;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0" >
+						<tr>
+							<td valign="top">
+					<![endif]-->
+					<div class="div600">
+						<table width="100%">
+							<tr>
+									<td class="headline01">
+										<p>Full Width Text Used as a Headline</p><!-- EDITABLE: text and link -->
+									</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: Full Width Text -->
+
+	<!-- START: Full Width Text -->
+	<!-- PRIMARY STYLES: "headline##" or "story##" for the text; all "a"'s for links; "p" for text spacing; -->
+	<!-- NOTES: use spans with inline CSS to manage styles within the container style. For example, use "quote" and "cite" in spans to call out blockquotes. -->
+	<!-- UNIT TESTING 04s -->
+			<tr>
+				<td  style="text-align: center; vertical-align: top;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0" >
+						<tr>
+							<td valign="top">
+					<![endif]-->
+					<div class="div600">
+						<table width="100%">
+							<tr>
+									<td class="story01">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mi vitae ante auctor tristique. Nam dictum bibendum augue, at tincidunt elit dignissim quis.</p>
+										<p>Phasellus ultricies laoreet nisl, eget <a href="http://www.google.com/">lacinia odio porttitor</a>ut. Aliquam ullamcorper eros in velit venenatis, vitae cursus magna pretium. Sed quis consequat nulla. Pellentesque tempus interdum quam, ac rutrum quam tincidunt nec.</p>
+										<p>Proin sollicitudin sollicitudin tellus a vehicula. Duis nec turpis id odio tempor mattis pulvinar ac justo. Vivamus varius leo at massa porta pharetra. Donec ut nibh sed lacus aliquam dictum. Suspendisse potenti.</p>
+										<p>Fusce nisi massa, volutpat a commodo quis, molestie at ante. In hac habitasse platea dictumst</p><!-- EDITABLE: text and link -->
+									</td>
+							</tr>
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: Full Width Text -->
+	
+	
+	<!-- START: 50/50 CTA Boxes -->
+	<!-- PRIMARY STYLES: 
+			"ctaBox_inner2" and "ctaBox_inner2 a" for the height of the button and the text display
+			"ctaHeightHeadline" and "ctaHeightBody" for the height of the headline and body rows, respectively
+			"ctaHeightButton" for the padding on top/bottom (via "height") and left/right (via "padding-left" and "padding-right") of the button
+			"buttonRounded" for rounding the button in most browsers -->
+	<!-- NOTES: 
+			"ctaHeight*" must be set at least as large as the number of lines multiplied by the line-height plus padding 
+			each portion of the box (the Headline, the Story, and/or the button) can be removed by deleting the appropriate <tr> element -->
+	<!-- UNIT TESTING 05 -->
+			<tr>
+				<td style="text-align: center; vertical-align: top;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td valign="top">
+					<![endif]-->
+					<div class="div290 ctaBox_mrgnR5">
+						<table class="bgclr02" width="290" align="center">
+							<tr>
+								<td class="headline02 ctaHeightHeadline">
+									Horiz CTAx2 Headline 1
+								</td>
+							</tr>
+							<tr>
+								<td class="story02 ctaHeightBody">
+									<p>Horizontal CTAx2 body copy on the left/top. Tnam metus magna, pharetra eu eros a, imperdiet gravida purus.</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="story02 ctaHeightButton">
+									<table width="100%">
+										<tr>
+											<td>
+												<table width="100%">
+													<tr>
+														<td class="ctaBox_inner2 buttonColor01 buttonRounded">
+															<a href="http://www.google.com">Rounded Button</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>					
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+							<td valign="top">
+					<![endif]-->
+					<div class="div290 ctaBox_mrgnL5">
+						<table class="bgclr02" width="290" align="center">
+							<tr>
+								<td class="headline02 ctaHeightHeadline">
+									Horiz CTAx2 Headline 2
+								</td>
+							</tr>
+							<tr>
+								<td class="story02 ctaHeightBody">
+									<p>Horizontal CTAx2 body copy on the right/bottom. Quis imperdiet id, faucibus quis lacus.</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="story02 ctaHeightButton" align="center" valign="top">
+									<table width="100%">
+										<tr>
+											<td>
+												<table width="100%">
+													<tr>
+														<td class="ctaBox_inner2 buttonColor01">
+															<a href="http://www.google.com">Squared Corners</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>					
+						</table>
+					</div>
+					<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
+				</td>
+			</tr>
+	<!-- END: 50/50 CTA Boxes -->
+	
+		</table>
+		<!--[if (gte mso 9)|(IE)]>
+				</td>
+			</tr>
+		</table>
+		<![endif]-->
+<!--END: Interior Table-->
+</body>
+</html>
